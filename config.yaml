@@ -1,0 +1,70 @@
+# configuration for portfolio management reinforcement learning agent
+
+# general
+rate:
+  desc: learning rate
+  value: 0.00007
+prate:
+  desc: policy net learning rate (only for DDPG)
+  value: 0.00007
+warmup:
+  desc: time without training but only filling the replay memory
+  value: 25
+bsize:
+  desc: minibatch size
+  value: 1
+rmsize:
+  desc: memory size
+  value: 25
+validate_episodes:
+  desc: how many episode to perform during validate experiment
+  value: 1
+validate_steps:
+  desc: how many steps to perform a validate experiment
+  value: 25
+init_w:
+  desc: ""
+  value: 0.003
+train_iter:
+  desc: train iters each timestep
+  value: 1000
+seed:
+  desc: ""
+  value: -1
+
+# actor
+hidden1:
+  desc: hidden num of first fully connect layer
+  value: 400
+hidden2:
+  desc: hidden num of second fully connect layer
+  value: 300
+tau:
+  desc: moving average for target network
+  value: 0.001
+ou_theta:
+  desc: noise theta
+  value: 0.15
+ou_sigma:
+  desc: noise sigma
+  value: 0.2
+ou_mu:
+  desc: noise mu
+  value: 0.0
+epsilon:
+  desc: linear decay of exploration policy
+  value: 50000
+
+# t-lstm
+
+
+# unknown
+discount:
+  desc: ""
+  value: 0.99
+window_length:
+  desc: ""
+  value: 1
+max_episode_length:
+  desc: ""
+  value: 300
